@@ -13,40 +13,44 @@
     </style>
 </head>
 <body>
-    <h1>count.em - Privacy Policy and Support </h1>
-    <p class="updated">Last updated: March 31, 2026</p>
- 
+    <h1>count.em — Privacy Policy</h1>
+    <p class="updated">Last updated: April 20, 2026</p>
+
     <h2>Overview</h2>
-    <p>count.em is a calorie and nutrition tracking app. Your privacy is important to us. This policy explains what data the app collects and how it is used.</p>
- 
+    <p>count.em is a calorie, nutrition, water, weight, and workout tracking app. Your privacy is important to us. This policy explains what data the app collects and how it is used.</p>
+
     <h2>Data Storage</h2>
-    <p>All food logs, nutrition goals, and personal settings are stored on your device using Apple's SwiftData framework. If you are signed into iCloud, your data is automatically synced to your private iCloud account using Apple's CloudKit. This enables your data to persist across app reinstalls and sync between your devices. Apple handles the encryption and storage — we never have access to your iCloud data.</p>
- 
+    <p>All food logs, water intake logs, weight entries, nutrition goals, and personal settings are stored on your device using Apple's SwiftData framework. If you are signed into iCloud, your data is automatically synced to your private iCloud account using Apple's CloudKit. This enables your data to persist across app reinstalls and sync between your devices. Apple handles the encryption and storage — we never have access to your iCloud data.</p>
+
     <h2>Data Deletion</h2>
     <p>You can delete all local app data by deleting the app. To also remove synced data from iCloud, go to Settings → [your name] → iCloud → Manage Storage → count.em → Delete Data.</p>
- 
-    <h2>Camera</h2>
-    <p>count.em uses your device's camera to scan food barcodes and to capture photos for AI-based nutrition estimation. Camera access is only activated when you explicitly use the barcode scanner or photo capture features. Images and barcode data are processed on-device and are not transmitted to our servers.</p>
- 
+
+    <h2>Camera and Photo Library</h2>
+    <p>count.em uses your device's camera to scan food barcodes and to capture photos for AI-based nutrition estimation. It can also access photos you explicitly pick from your photo library for the same purpose. If you are using the on-device AI mode, images stay on your device. If you have configured Google Gemini or OpenAI, images are sent to the active provider as described in the AI Nutrition Estimation section. Camera and photo library access are only activated when you explicitly use these features.</p>
+
     <h2>Open Food Facts</h2>
     <p>When you scan a barcode, the app sends the barcode number to the <a href="https://openfoodfacts.org">Open Food Facts</a> API to retrieve product nutrition data. No personal information is included in these requests beyond the barcode number.</p>
- 
+
     <h2>USDA FoodData Central</h2>
-    <p>When you search for foods or scan a barcode not found in Open Food Facts, the app queries the <a href="https://fdc.nal.usda.gov">USDA FoodData Central</a> API to retrieve nutrition data. Only the search query or barcode number is sent. No personal information is included in these requests.</p>
- 
-    <h2>On-Device AI</h2>
-    <p>The AI nutrition estimation feature uses Apple's on-device Foundation Models. All processing happens locally on your device. No food descriptions or images are sent to external servers for this feature.</p>
- 
+    <p>When you scan a barcode that is not found in Open Food Facts, the app queries the <a href="https://fdc.nal.usda.gov">USDA FoodData Central</a> API as a fallback to retrieve nutrition data. Only the barcode number is sent. No personal information is included in these requests.</p>
+
+    <h2>AI Nutrition Estimation</h2>
+    <p>The AI nutrition estimation feature supports three modes:</p>
+    <ul>
+        <li><strong>On-device (Apple Foundation Models):</strong> Text descriptions are processed locally on your device. No data leaves the device.</li>
+        <li><strong>Google Gemini (optional, bring-your-own-key):</strong> If you add a Gemini API key in Settings, text descriptions and photos you submit are sent directly from your device to Google's Gemini API. Google's handling of this data is governed by their <a href="https://ai.google.dev/terms">Gemini API Terms of Service</a> and <a href="https://policies.google.com/privacy">Privacy Policy</a>; notably, on Google's free tier, data may be used to improve their models.</li>
+        <li><strong>OpenAI (optional, bring-your-own-key):</strong> If you add an OpenAI API key in Settings, text descriptions and photos you submit are sent directly from your device to OpenAI's API. OpenAI's handling of this data is governed by their <a href="https://openai.com/policies/api-data-usage-policies">API data usage policies</a>; OpenAI does not use API data to train their models by default.</li>
+    </ul>
+    <p>count.em does not relay your data through our servers — requests go straight from your device to whichever provider you configure, using your key. If both keys are present, you choose which provider is active in Settings → AI. You can remove your keys at any time in Settings → AI, which stops all data sharing with that provider.</p>
+    <p>Your API keys are stored in the iOS Keychain on your device only and are never transmitted to count.em or any third party other than the provider you use them with.</p>
+
     <h2>Third-Party Services</h2>
     <p>count.em does not use any analytics, advertising, or tracking SDKs. We do not collect, share, or sell your personal information to third parties.</p>
- 
+
     <h2>Children's Privacy</h2>
     <p>count.em is not directed at children under 13. We do not knowingly collect personal information from children.</p>
- 
+
     <h2>Changes to This Policy</h2>
     <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date.</p>
-
-    <h2>Support</h2>
-    <p>Need help? Contact us at <a href="mailto:countem@armandsarkezians.com">countem@armandsarkezians.com</a> for support.</p>
 </body>
 </html>
