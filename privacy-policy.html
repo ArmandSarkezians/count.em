@@ -14,10 +14,10 @@
 </head>
 <body>
     <h1>count.em — Privacy Policy</h1>
-    <p class="updated">Last updated: April 20, 2026</p>
+    <p class="updated">Last updated: June 7, 2026</p>
 
     <h2>Overview</h2>
-    <p>count.em is a calorie, nutrition, water, weight, and workout tracking app. Your privacy is important to us. This policy explains what data the app collects and how it is used.</p>
+    <p>count.em is a calorie, nutrition, water, weight, workout, and body composition tracking app. Your privacy is important to us. This policy explains what data the app collects and how it is used.</p>
 
     <h2>Data Storage</h2>
     <p>All food logs, water intake logs, weight entries, nutrition goals, and personal settings are stored on your device using Apple's SwiftData framework. If you are signed into iCloud, your data is automatically synced to your private iCloud account using Apple's CloudKit. This enables your data to persist across app reinstalls and sync between your devices. Apple handles the encryption and storage — we never have access to your iCloud data.</p>
@@ -43,6 +43,12 @@
     </ul>
     <p>count.em does not relay your data through our servers — requests go straight from your device to whichever provider you configure, using your key. If both keys are present, you choose which provider is active in Settings → AI. You can remove your keys at any time in Settings → AI, which stops all data sharing with that provider.</p>
     <p>Your API keys are stored in the iOS Keychain on your device only and are never transmitted to count.em or any third party other than the provider you use them with.</p>
+
+    <h2>Bluetooth (Smart Scale)</h2>
+    <p>count.em can connect to Bluetooth Low Energy (BLE) smart scales (such as Etekcity ESF-551 and similar models) to automatically import weight measurements. The app uses iOS CoreBluetooth to communicate directly with your scale over a local Bluetooth connection. No data from your scale is transmitted to any server — weight readings are stored locally on your device (and synced to your private iCloud account if enabled). Bluetooth is only used when you explicitly pair a scale in Settings. The app uses background Bluetooth to detect your scale even when the app is not in the foreground, so weight readings are captured automatically when you step on your scale.</p>
+
+    <h2>Body Composition</h2>
+    <p>If you optionally provide your height, birth year, and biological sex (in Settings or during onboarding), the app uses this information alongside impedance data from your smart scale to estimate body composition metrics such as body fat percentage, muscle mass, and BMR. This data is stored only on your device and in your private iCloud account — it is never sent to count.em or any third party. Body composition estimates are approximate and intended for fitness tracking only, not medical diagnosis.</p>
 
     <h2>Third-Party Services</h2>
     <p>count.em does not use any analytics, advertising, or tracking SDKs. We do not collect, share, or sell your personal information to third parties.</p>
